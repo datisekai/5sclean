@@ -1,0 +1,21 @@
+---
+export interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const { 
+  size = 'md', 
+  className = ''
+} = Astro.props;
+
+const sizeClasses = {
+  sm: 'w-8 h-8',
+  md: 'w-10 h-10',
+  lg: 'w-12 h-12'
+};
+---
+
+<a href="/" class={`flex items-center space-x-2 ${className}`}>
+  <img src="/logo.webp" alt="5S Clean Logo" class={`object-contain rounded-lg bg-primary ${sizeClasses[size]}`} loading="lazy" />
+</a> 

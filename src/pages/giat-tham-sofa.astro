@@ -1,0 +1,559 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Giặt thảm, sofa, ghế";
+const pageDescription = "Dịch vụ giặt thảm, sofa, ghế chuyên nghiệp với máy móc hiện đại, hóa chất an toàn. Đảm bảo sạch sẽ, thơm tho và bảo vệ bề mặt.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-white">
+    <div class="container-custom section-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Giặt thảm, sofa, ghế
+        </h1>
+        <p class="text-xl text-gray-100 leading-relaxed mb-8">
+          Dịch vụ giặt sạch chuyên nghiệp cho thảm, sofa và ghế văn phòng. 
+          Sử dụng máy móc hiện đại và hóa chất an toàn, đảm bảo sạch sẽ, thơm tho.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/lien-he" class="btn-secondary text-lg px-8 py-4">
+            <i class="fas fa-phone mr-2"></i>
+            Tư vấn miễn phí
+          </a>
+          <a href="#bao-gia" class="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-white/30">
+            Xem báo giá
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="bg-gray-light py-8">
+    <div class="container-custom">
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-gray-dark mb-4">Mục lục</h2>
+        <nav class="space-y-2">
+          <a href="#dich-vu" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Các dịch vụ giặt
+          </a>
+          <a href="#quy-trinh" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Quy trình thực hiện
+          </a>
+          <a href="#bao-gia" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Báo giá dịch vụ
+          </a>
+          <a href="#uu-diem" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Ưu điểm của dịch vụ
+          </a>
+          <a href="#lien-he" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Liên hệ tư vấn
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="dich-vu" class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Các dịch vụ giặt
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Chúng tôi cung cấp đầy đủ các dịch vụ giặt chuyên nghiệp cho mọi loại thảm, sofa và ghế
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-couch text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt sofa</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt sạch bề mặt sofa</li>
+            <li>• Xử lý vết bẩn cứng đầu</li>
+            <li>• Khử mùi hôi</li>
+            <li>• Bảo vệ màu sắc</li>
+            <li>• Làm mềm vải</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-chair text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt ghế văn phòng</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt ghế bàn làm việc</li>
+            <li>• Giặt ghế họp, ghế sảnh</li>
+            <li>• Xử lý vết bẩn mực, cà phê</li>
+            <li>• Khử mùi thuốc lá</li>
+            <li>• Bảo vệ da, vải</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-rug text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt thảm trải sàn</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt thảm văn phòng</li>
+            <li>• Giặt thảm phòng khách</li>
+            <li>• Xử lý vết bẩn cứng đầu</li>
+            <li>• Khử mùi hôi</li>
+            <li>• Bảo vệ sợi thảm</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-bed text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt nệm</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt nệm giường</li>
+            <li>• Giặt nệm sofa</li>
+            <li>• Xử lý vết bẩn, mồ hôi</li>
+            <li>• Khử mùi hôi</li>
+            <li>• Diệt khuẩn, bọ ve</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-car text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt nội thất ô tô</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt ghế xe hơi</li>
+            <li>• Giặt thảm lót sàn xe</li>
+            <li>• Xử lý vết bẩn thức ăn</li>
+            <li>• Khử mùi xe</li>
+            <li>• Bảo vệ da, vải</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-home text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt đồ nội thất</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Giặt rèm cửa</li>
+            <li>• Giặt gối, chăn</li>
+            <li>• Giặt đồ trang trí</li>
+            <li>• Xử lý vết bẩn</li>
+            <li>• Bảo vệ chất liệu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="quy-trinh" class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Quy trình thực hiện
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Quy trình giặt chuyên nghiệp, đảm bảo chất lượng và an toàn cho đồ vật
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Khảo sát</h3>
+          <p class="text-gray">
+            Kiểm tra loại vải, chất liệu và mức độ bẩn để chọn phương pháp phù hợp
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Xử lý vết bẩn</h3>
+          <p class="text-gray">
+            Xử lý các vết bẩn cứng đầu trước khi giặt chính
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giặt chính</h3>
+          <p class="text-gray">
+            Sử dụng máy móc chuyên dụng và hóa chất phù hợp để giặt sạch
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Hoàn thiện</h3>
+          <p class="text-gray">
+            Sấy khô, làm mềm và khử mùi để hoàn thiện dịch vụ
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="bao-gia" class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Báo giá dịch vụ
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Báo giá cạnh tranh, phù hợp với từng loại đồ vật và mức độ bẩn
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Giặt sofa</h3>
+            <div class="text-4xl font-bold text-primary mb-2">150.000đ</div>
+            <div class="text-gray">/bộ</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Sofa 2 chỗ ngồi
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Xử lý vết bẩn
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Khử mùi hôi
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Bảo vệ màu sắc
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-primary relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+            Phổ biến
+          </div>
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Giặt ghế văn phòng</h3>
+            <div class="text-4xl font-bold text-primary mb-2">80.000đ</div>
+            <div class="text-gray">/ghế</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Ghế bàn làm việc
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Xử lý vết bẩn mực
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Khử mùi thuốc lá
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Bảo vệ da, vải
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Làm mềm vải
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Giặt thảm</h3>
+            <div class="text-4xl font-bold text-primary mb-2">25.000đ</div>
+            <div class="text-gray">/m²</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Thảm trải sàn
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Xử lý vết bẩn cứng đầu
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Khử mùi hôi
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Bảo vệ sợi thảm
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Sấy khô nhanh
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Diệt khuẩn, bọ ve
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+      </div>
+      
+      <!-- Additional Services -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-dark mb-8 text-center">Dịch vụ bổ sung</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-semibold text-gray-dark">Giặt nệm</h4>
+              <span class="text-primary font-bold">200.000đ</span>
+            </div>
+            <p class="text-sm text-gray">Giặt sạch nệm giường, nệm sofa</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-semibold text-gray-dark">Giặt rèm</h4>
+              <span class="text-primary font-bold">50.000đ/m²</span>
+            </div>
+            <p class="text-sm text-gray">Giặt sạch rèm cửa các loại</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-semibold text-gray-dark">Giặt nội thất xe</h4>
+              <span class="text-primary font-bold">300.000đ</span>
+            </div>
+            <p class="text-sm text-gray">Giặt ghế xe, thảm lót sàn</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-semibold text-gray-dark">Khử mùi</h4>
+              <span class="text-primary font-bold">50.000đ</span>
+            </div>
+            <p class="text-sm text-gray">Khử mùi hôi, thuốc lá</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section id="uu-diem" class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Ưu điểm của dịch vụ
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Những lý do khiến khách hàng tin tưởng lựa chọn dịch vụ giặt của 5S Clean
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-tools text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Máy móc hiện đại</h3>
+          <p class="text-gray">
+            Sử dụng máy giặt chuyên dụng nhập khẩu, đảm bảo hiệu quả giặt sạch cao
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-shield-alt text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Hóa chất an toàn</h3>
+          <p class="text-gray">
+            Sử dụng hóa chất chuyên dụng, an toàn cho sức khỏe và bảo vệ bề mặt
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Đội ngũ chuyên nghiệp</h3>
+          <p class="text-gray">
+            Nhân viên được đào tạo bài bản, có kinh nghiệm xử lý mọi loại vết bẩn
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-clock text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Thời gian nhanh</h3>
+          <p class="text-gray">
+            Thời gian giặt nhanh chóng, không ảnh hưởng đến sinh hoạt, công việc
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-dollar-sign text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giá cả hợp lý</h3>
+          <p class="text-gray">
+            Báo giá cạnh tranh, minh bạch và phù hợp với từng loại đồ vật
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-headset text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Hỗ trợ 24/7</h3>
+          <p class="text-gray">
+            Đội ngũ hỗ trợ khách hàng hoạt động 24/7, sẵn sàng giải đáp mọi thắc mắc
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="lien-he" class="section-padding bg-primary text-white">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Liên hệ tư vấn miễn phí
+        </h2>
+        <p class="text-xl text-gray-100 max-w-2xl mx-auto">
+          Hãy để lại thông tin, chúng tôi sẽ liên hệ tư vấn và báo giá chi tiết cho dịch vụ giặt
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-phone text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Gọi điện thoại</div>
+              <div class="text-gray-100">0123 456 789</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fab fa-zalo text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Zalo</div>
+              <div class="text-gray-100">0123 456 789</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Email</div>
+              <div class="text-gray-100">info@5sclean.com</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Địa chỉ</div>
+              <div class="text-gray-100">123 Đường ABC, Quận 1, TP.HCM</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Họ và tên *</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập họ và tên">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Số điện thoại *</label>
+                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập số điện thoại">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập email">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Loại đồ vật cần giặt</label>
+              <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                <option value="">Chọn loại đồ vật</option>
+                <option value="sofa">Sofa</option>
+                <option value="ghe-van-phong">Ghế văn phòng</option>
+                <option value="tham">Thảm trải sàn</option>
+                <option value="nem">Nệm</option>
+                <option value="noi-that-xe">Nội thất ô tô</option>
+                <option value="do-noi-that">Đồ nội thất khác</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Số lượng</label>
+              <input type="number" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập số lượng">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Ghi chú</label>
+              <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Mô tả chi tiết nhu cầu giặt..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full btn-secondary text-lg py-4">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Gửi yêu cầu tư vấn
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout> 

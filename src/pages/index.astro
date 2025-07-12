@@ -1,11 +1,372 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Mock data for services
+const services = [
+  {
+    id: 1,
+    title: "Tạp vụ định kỳ",
+    description: "Dịch vụ vệ sinh định kỳ cho văn phòng, nhà xưởng, trung tâm thương mại",
+    icon: "fas fa-calendar-check",
+    color: "bg-primary",
+    link: "/tap-vu-dinh-ky"
+  },
+  {
+    id: 2,
+    title: "Tổng vệ sinh",
+    description: "Dịch vụ vệ sinh toàn diện cho các công trình mới hoặc sau sửa chữa",
+    icon: "fas fa-broom",
+    color: "bg-secondary",
+    link: "/tong-ve-sinh"
+  },
+  {
+    id: 3,
+    title: "Giặt thảm, sofa, ghế",
+    description: "Dịch vụ giặt sạch chuyên nghiệp cho thảm, sofa và ghế văn phòng",
+    icon: "fas fa-couch",
+    color: "bg-primary",
+    link: "/giat-tham-sofa"
+  }
+];
+
+// Mock data for certificates
+const certificates = [
+  {
+    id: 1,
+    title: "ISO 9001:2015",
+    description: "Chứng nhận hệ thống quản lý chất lượng",
+    image: "/certificates/iso-9001.jpg"
+  },
+  {
+    id: 2,
+    title: "ISO 14001:2015",
+    description: "Chứng nhận hệ thống quản lý môi trường",
+    image: "/certificates/iso-14001.jpg"
+  },
+  {
+    id: 3,
+    title: "OHSAS 18001:2007",
+    description: "Chứng nhận hệ thống quản lý an toàn lao động",
+    image: "/certificates/ohsas-18001.jpg"
+  }
+];
+
+// Mock data for news
+const news = [
+  {
+    id: 1,
+    title: "Xu hướng vệ sinh công nghiệp năm 2024",
+    excerpt: "Những xu hướng mới trong ngành vệ sinh công nghiệp và cách áp dụng công nghệ hiện đại...",
+    image: "/news/trend-2024.jpg",
+    date: "2024-01-15",
+    category: "Tin tức"
+  },
+  {
+    id: 2,
+    title: "Lợi ích của việc vệ sinh định kỳ",
+    excerpt: "Tại sao doanh nghiệp nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại...",
+    image: "/news/benefits.jpg",
+    date: "2024-01-10",
+    category: "Kiến thức"
+  },
+  {
+    id: 3,
+    title: "Công nghệ vệ sinh thông minh",
+    excerpt: "Khám phá các công nghệ vệ sinh hiện đại giúp tiết kiệm thời gian và chi phí...",
+    image: "/news/smart-cleaning.jpg",
+    date: "2024-01-05",
+    category: "Công nghệ"
+  }
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Trang chủ" description="5S Clean - Dịch vụ vệ sinh công nghiệp chuyên nghiệp, uy tín hàng đầu. Chúng tôi cung cấp các dịch vụ vệ sinh toàn diện cho doanh nghiệp và hộ gia đình.">
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-white overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-10"></div>
+    
+    <div class="container-custom section-padding relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+            Dịch vụ vệ sinh công nghiệp
+            <span class="text-secondary block">chuyên nghiệp</span>
+          </h1>
+          <p class="text-xl text-gray-100 leading-relaxed">
+            Với hơn 10 năm kinh nghiệm, 5S Clean tự hào là đối tác tin cậy của hàng nghìn doanh nghiệp 
+            trong việc duy trì môi trường làm việc sạch sẽ, an toàn.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/lien-he" class="btn-secondary text-lg px-8 py-4">
+              <i class="fas fa-phone mr-2"></i>
+              Liên hệ ngay
+            </a>
+            <a href="/gioi-thieu" class="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white">
+              Tìm hiểu thêm
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 class="text-2xl font-bold mb-6">Thống kê nổi bật</h3>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-secondary mb-2">500+</div>
+                <div class="text-sm">Khách hàng</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-secondary mb-2">10+</div>
+                <div class="text-sm">Năm kinh nghiệm</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-secondary mb-2">50+</div>
+                <div class="text-sm">Nhân viên</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-secondary mb-2">100%</div>
+                <div class="text-sm">Hài lòng</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Dịch vụ của chúng tôi
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Cung cấp đầy đủ các dịch vụ vệ sinh công nghiệp chuyên nghiệp, 
+          đáp ứng mọi nhu cầu của doanh nghiệp
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <div class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="p-8">
+              <div class={`w-16 h-16 ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <i class={`${service.icon} text-2xl text-white`}></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-dark mb-4">{service.title}</h3>
+              <p class="text-gray mb-6 leading-relaxed">{service.description}</p>
+              <a href={service.link} class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
+                Tìm hiểu thêm
+                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-dark">
+            Về 5S Clean
+          </h2>
+          <p class="text-lg text-gray leading-relaxed">
+            Được thành lập từ năm 2014, 5S Clean đã trở thành một trong những công ty vệ sinh công nghiệp 
+            hàng đầu tại Việt Nam. Chúng tôi cam kết mang đến dịch vụ chất lượng cao với đội ngũ nhân viên 
+            chuyên nghiệp và trang thiết bị hiện đại.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <i class="fas fa-check text-white"></i>
+              </div>
+              <div>
+                <div class="font-semibold">Chất lượng cao</div>
+                <div class="text-sm text-gray">Đảm bảo 100%</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <i class="fas fa-clock text-white"></i>
+              </div>
+              <div>
+                <div class="font-semibold">Nhanh chóng</div>
+                <div class="text-sm text-gray">24/7 hỗ trợ</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <i class="fas fa-shield-alt text-white"></i>
+              </div>
+              <div>
+                <div class="font-semibold">An toàn</div>
+                <div class="text-sm text-gray">Bảo hiểm đầy đủ</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <i class="fas fa-dollar-sign text-white"></i>
+              </div>
+              <div>
+                <div class="font-semibold">Giá tốt</div>
+                <div class="text-sm text-gray">Cạnh tranh</div>
+              </div>
+            </div>
+          </div>
+          <a href="/gioi-thieu" class="btn-primary inline-block">
+            Tìm hiểu thêm về chúng tôi
+          </a>
+        </div>
+        
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 text-white">
+            <h3 class="text-2xl font-bold mb-6">Tại sao chọn 5S Clean?</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <i class="fas fa-star text-secondary mt-1"></i>
+                <div>
+                  <div class="font-semibold">Đội ngũ chuyên nghiệp</div>
+                  <div class="text-sm text-gray-100">Nhân viên được đào tạo bài bản</div>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fas fa-star text-secondary mt-1"></i>
+                <div>
+                  <div class="font-semibold">Thiết bị hiện đại</div>
+                  <div class="text-sm text-gray-100">Máy móc nhập khẩu chất lượng cao</div>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fas fa-star text-secondary mt-1"></i>
+                <div>
+                  <div class="font-semibold">Dịch vụ 24/7</div>
+                  <div class="text-sm text-gray-100">Hỗ trợ khách hàng mọi lúc</div>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fas fa-star text-secondary mt-1"></i>
+                <div>
+                  <div class="font-semibold">Giá cả hợp lý</div>
+                  <div class="text-sm text-gray-100">Cam kết giá tốt nhất thị trường</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Chứng chỉ & Giải thưởng
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Những chứng nhận và giải thưởng chứng minh chất lượng dịch vụ của chúng tôi
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {certificates.map((cert) => (
+          <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-certificate text-3xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-dark mb-4">{cert.title}</h3>
+            <p class="text-gray">{cert.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+            Tin tức & Sự kiện
+          </h2>
+          <p class="text-xl text-gray">
+            Cập nhật những tin tức mới nhất về ngành vệ sinh công nghiệp
+          </p>
+        </div>
+        <a href="/tin-tuc" class="btn-secondary">
+          Xem tất cả
+        </a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {news.map((article) => (
+          <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-48 bg-gray-200 flex items-center justify-center">
+              <i class="fas fa-image text-4xl text-gray-400"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-2 mb-3">
+                <span class="text-xs bg-primary text-white px-2 py-1 rounded-full">{article.category}</span>
+                <span class="text-sm text-gray">{new Date(article.date).toLocaleDateString('vi-VN')}</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-dark mb-3 line-clamp-2">{article.title}</h3>
+              <p class="text-gray mb-4 line-clamp-3">{article.excerpt}</p>
+              <a href={`/tin-tuc/${article.id}`} class="text-primary font-semibold hover:text-primary-dark transition-colors">
+                Đọc thêm
+                <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-primary text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Sẵn sàng hợp tác với chúng tôi?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Liên hệ ngay để được tư vấn miễn phí và nhận báo giá chi tiết cho dịch vụ vệ sinh công nghiệp
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0123456789" class="btn-secondary text-lg px-8 py-4">
+          <i class="fas fa-phone mr-2"></i>
+          Gọi ngay: 0123 456 789
+        </a>
+        <a href="/lien-he" class="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white">
+          Gửi yêu cầu tư vấn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+	@reference "../styles/global.css";
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
 </Layout>

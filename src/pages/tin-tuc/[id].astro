@@ -1,0 +1,446 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export interface Props {
+  id: string;
+}
+
+// Mock data for news/events
+const mockNewsData = {
+  "1": {
+    id: "1",
+    title: "5S Clean được vinh danh Top 10 Dịch vụ vệ sinh công nghiệp uy tín 2024",
+    excerpt: "Công ty 5S Clean vinh dự được bình chọn vào Top 10 Dịch vụ vệ sinh công nghiệp uy tín nhất năm 2024 bởi Hiệp hội Doanh nghiệp Việt Nam.",
+    content: `
+      <div class="prose prose-lg max-w-none">
+        <p class="text-gray-600 mb-6">Ngày 15/12/2024, tại Hội trường lớn của Hiệp hội Doanh nghiệp Việt Nam, Công ty 5S Clean đã vinh dự được trao giải thưởng "Top 10 Dịch vụ vệ sinh công nghiệp uy tín 2024".</p>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Những thành tựu nổi bật</h2>
+        <p class="mb-4">Trong năm 2024, 5S Clean đã đạt được những thành tựu đáng kể:</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2">
+          <li>Phục vụ hơn 500 khách hàng doanh nghiệp</li>
+          <li>Mở rộng dịch vụ tại 3 tỉnh thành mới</li>
+          <li>Đạt chứng nhận ISO 9001:2015</li>
+          <li>Được 98% khách hàng đánh giá hài lòng</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Cam kết chất lượng</h2>
+        <p class="mb-4">Với phương châm "Sạch sẽ - An toàn - Chuyên nghiệp", 5S Clean cam kết:</p>
+        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+          <ul class="space-y-2">
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Sử dụng hóa chất an toàn, thân thiện môi trường</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Đội ngũ nhân viên được đào tạo chuyên nghiệp</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Bảo hành dịch vụ 100%</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Giá cả cạnh tranh, minh bạch</li>
+          </ul>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Lộ trình phát triển 2025</h2>
+        <p class="mb-4">Trong năm 2025, 5S Clean sẽ tập trung vào:</p>
+        <ol class="list-decimal pl-6 mb-6 space-y-2">
+          <li>Mở rộng dịch vụ ra toàn quốc</li>
+          <li>Ứng dụng công nghệ AI trong quản lý chất lượng</li>
+          <li>Phát triển dịch vụ vệ sinh thông minh</li>
+          <li>Đào tạo và nâng cao kỹ năng cho đội ngũ nhân viên</li>
+        </ol>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+          <p class="text-blue-800"><strong>Lưu ý:</strong> Để được tư vấn và báo giá dịch vụ vệ sinh công nghiệp, quý khách vui lòng liên hệ hotline: <a href="tel:0123456789" class="text-blue-600 hover:text-blue-800 font-semibold">0123 456 789</a></p>
+        </div>
+      </div>
+    `,
+    image: "/news-1.jpg",
+    category: "Tin tức",
+    author: "5S Clean",
+    publishDate: "2024-12-15",
+    tags: ["vinh danh", "giải thưởng", "uy tín", "chất lượng"],
+    readTime: "5 phút"
+  },
+  "2": {
+    id: "2",
+    title: "Hướng dẫn vệ sinh văn phòng hiệu quả trong mùa dịch",
+    excerpt: "Những phương pháp vệ sinh văn phòng hiệu quả để đảm bảo an toàn cho nhân viên trong mùa dịch bệnh.",
+    content: `
+      <div class="prose prose-lg max-w-none">
+        <p class="text-gray-600 mb-6">Trong bối cảnh dịch bệnh phức tạp, việc vệ sinh văn phòng đúng cách trở nên quan trọng hơn bao giờ hết. Dưới đây là những hướng dẫn chi tiết từ chuyên gia 5S Clean.</p>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Vệ sinh bề mặt thường xuyên chạm vào</h2>
+        <p class="mb-4">Các bề mặt cần được vệ sinh ít nhất 2 lần/ngày:</p>
+        <ul class="list-disc pl-6 mb-6 space-y-2">
+          <li>Tay nắm cửa, tay vịn cầu thang</li>
+          <li>Bàn phím, chuột máy tính</li>
+          <li>Điện thoại, máy in</li>
+          <li>Bàn làm việc, ghế ngồi</li>
+        </ul>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Sử dụng hóa chất phù hợp</h2>
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+          <p class="text-yellow-800"><strong>Lưu ý quan trọng:</strong> Chỉ sử dụng hóa chất được Bộ Y tế phê duyệt và tuân thủ hướng dẫn sử dụng.</p>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Quy trình vệ sinh 5 bước</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-lg mb-2">Bước 1: Chuẩn bị</h3>
+            <p>Thu dọn đồ đạc, chuẩn bị dụng cụ và hóa chất cần thiết.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-lg mb-2">Bước 2: Làm sạch</h3>
+            <p>Loại bỏ bụi bẩn bằng khăn ẩm hoặc máy hút bụi.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-lg mb-2">Bước 3: Khử khuẩn</h3>
+            <p>Sử dụng hóa chất khử khuẩn phù hợp.</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-lg mb-2">Bước 4: Lau khô</h3>
+            <p>Lau khô bề mặt để tránh ẩm mốc.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Tần suất vệ sinh khuyến nghị</h2>
+        <table class="w-full border-collapse border border-gray-300 mb-6">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-2 text-left">Khu vực</th>
+              <th class="border border-gray-300 p-2 text-left">Tần suất</th>
+              <th class="border border-gray-300 p-2 text-left">Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-2">Phòng họp</td>
+              <td class="border border-gray-300 p-2">Sau mỗi cuộc họp</td>
+              <td class="border border-gray-300 p-2">Đặc biệt chú ý bàn, ghế</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2">Nhà vệ sinh</td>
+              <td class="border border-gray-300 p-2">2-3 lần/ngày</td>
+              <td class="border border-gray-300 p-2">Vệ sinh kỹ lưỡng</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2">Khu vực chung</td>
+              <td class="border border-gray-300 p-2">1 lần/ngày</td>
+              <td class="border border-gray-300 p-2">Sảnh, hành lang</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+          <p class="text-green-800"><strong>Tip:</strong> Nên có lịch vệ sinh cụ thể và phân công trách nhiệm rõ ràng cho từng khu vực.</p>
+        </div>
+      </div>
+    `,
+    image: "/news-2.jpg",
+    category: "Hướng dẫn",
+    author: "Chuyên gia 5S Clean",
+    publishDate: "2024-12-10",
+    tags: ["vệ sinh văn phòng", "mùa dịch", "an toàn", "hướng dẫn"],
+    readTime: "8 phút"
+  },
+  "3": {
+    id: "3",
+    title: "Sự kiện: Workshop 'Vệ sinh xanh - Bảo vệ môi trường'",
+    excerpt: "Workshop chuyên đề về vệ sinh thân thiện môi trường với sự tham gia của các chuyên gia hàng đầu.",
+    content: `
+      <div class="prose prose-lg max-w-none">
+        <p class="text-gray-600 mb-6">Ngày 20/12/2024, 5S Clean sẽ tổ chức Workshop "Vệ sinh xanh - Bảo vệ môi trường" với sự tham gia của các chuyên gia hàng đầu trong lĩnh vực vệ sinh công nghiệp và bảo vệ môi trường.</p>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Thông tin sự kiện</h2>
+        <div class="bg-blue-50 p-6 rounded-lg mb-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 class="font-semibold text-lg mb-2">Thời gian</h3>
+              <p>20/12/2024 - 8:30 - 17:00</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2">Địa điểm</h3>
+              <p>Hội trường A - Tòa nhà ABC<br>123 Đường ABC, Quận 1, TP.HCM</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2">Phí tham dự</h3>
+              <p>Miễn phí (Đăng ký trước)</p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2">Số lượng</h3>
+              <p>100 người (Đã đăng ký: 75)</p>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Nội dung chương trình</h2>
+        <div class="space-y-4 mb-6">
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="font-semibold text-lg">8:30 - 9:00</h3>
+            <p>Đăng ký và khai mạc</p>
+          </div>
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="font-semibold text-lg">9:00 - 10:30</h3>
+            <p>Chuyên đề: "Xu hướng vệ sinh xanh trong thời đại 4.0"<br>
+            <em>Diễn giả: TS. Nguyễn Văn A - Chuyên gia môi trường</em></p>
+          </div>
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="font-semibold text-lg">10:45 - 12:00</h3>
+            <p>Thực hành: "Làm sạch không độc hại"<br>
+            <em>Hướng dẫn: Chuyên gia 5S Clean</em></p>
+          </div>
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="font-semibold text-lg">13:30 - 15:00</h3>
+            <p>Panel Discussion: "Giải pháp vệ sinh bền vững"</p>
+          </div>
+          <div class="border-l-4 border-primary pl-4">
+            <h3 class="font-semibold text-lg">15:15 - 17:00</h3>
+            <p>Networking và kết thúc</p>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Đăng ký tham dự</h2>
+        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Họ và tên *</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent" required>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+                <input type="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Công ty</label>
+                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Ghi chú</label>
+              <textarea rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Đăng ký tham dự</button>
+          </form>
+        </div>
+        
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+          <p class="text-yellow-800"><strong>Lưu ý:</strong> Vui lòng đăng ký trước ngày 18/12/2024 để đảm bảo chỗ ngồi. Sự kiện sẽ được livestream trên Facebook fanpage 5S Clean.</p>
+        </div>
+      </div>
+    `,
+    image: "/news-3.jpg",
+    category: "Sự kiện",
+    author: "5S Clean",
+    publishDate: "2024-12-05",
+    tags: ["workshop", "vệ sinh xanh", "môi trường", "sự kiện"],
+    readTime: "10 phút"
+  }
+};
+
+// Generate static paths for all news articles
+export async function getStaticPaths() {
+  // Define the news data directly in getStaticPaths
+  const newsData = {
+    "1": { id: "1" },
+    "2": { id: "2" },
+    "3": { id: "3" }
+  };
+  
+  return Object.keys(newsData).map(id => ({
+    params: { id },
+    props: { id }
+  }));
+}
+
+const { id } = Astro.params;
+
+// Get news data by ID
+const newsData = mockNewsData[id as keyof typeof mockNewsData];
+
+// If news not found, redirect to 404 or news list
+if (!newsData) {
+  return Astro.redirect('/tin-tuc');
+}
+
+const { title, excerpt, content, image, category, author, publishDate, tags, readTime } = newsData;
+---
+
+<Layout title={title}>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-primary to-primary-dark text-white py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="mb-4">
+          <span class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+            {category}
+          </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          {title}
+        </h1>
+        <p class="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          {excerpt}
+        </p>
+        <div class="flex items-center justify-center space-x-6 text-sm opacity-80">
+          <div class="flex items-center">
+            <i class="fas fa-user mr-2"></i>
+            <span>{author}</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-calendar mr-2"></i>
+            <span>{new Date(publishDate).toLocaleDateString('vi-VN')}</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-clock mr-2"></i>
+            <span>{readTime}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <!-- Featured Image -->
+        {image && (
+          <div class="mb-8">
+            <img 
+              src={image} 
+              alt={title}
+              class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        )}
+
+        <!-- Article Content -->
+        <article class="prose prose-lg max-w-none">
+          <div set:html={content}></div>
+        </article>
+
+        <!-- Tags -->
+        {tags && tags.length > 0 && (
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <h3 class="text-lg font-semibold mb-4">Tags:</h3>
+            <div class="flex flex-wrap gap-2">
+              {tags.map(tag => (
+                <a 
+                  href={`/tin-tuc?tag=${encodeURIComponent(tag)}`}
+                  class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Share Buttons -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h3 class="text-lg font-semibold mb-4">Chia sẻ bài viết:</h3>
+          <div class="flex space-x-4">
+            <a 
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <i class="fab fa-facebook mr-2"></i>
+              Facebook
+            </a>
+            <a 
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(Astro.url.href)}&text=${encodeURIComponent(title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
+            >
+              <i class="fab fa-twitter mr-2"></i>
+              Twitter
+            </a>
+            <a 
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              <i class="fab fa-linkedin mr-2"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div class="mt-16 pt-8 border-t border-gray-200">
+          <h3 class="text-2xl font-bold mb-8">Bài viết liên quan</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.values(mockNewsData)
+              .filter(news => news.id !== id)
+              .slice(0, 3)
+              .map(news => (
+                <a href={`/tin-tuc/${news.id}`} class="group">
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    {news.image && (
+                      <img 
+                        src={news.image} 
+                        alt={news.title}
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                    <div class="p-6">
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm text-primary font-medium">{news.category}</span>
+                        <span class="text-sm text-gray-500">{news.readTime}</span>
+                      </div>
+                      <h4 class="font-semibold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {news.title}
+                      </h4>
+                      <p class="text-gray-600 text-sm line-clamp-3">
+                        {news.excerpt}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-gray-50 py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold mb-4">Cần tư vấn dịch vụ vệ sinh?</h2>
+      <p class="text-xl text-gray-600 mb-8">Liên hệ ngay với chúng tôi để được tư vấn miễn phí</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0123456789" class="btn-primary">
+          <i class="fas fa-phone mr-2"></i>
+          Gọi ngay: 0123 456 789
+        </a>
+        <a href="/lien-he" class="btn-secondary">
+          <i class="fas fa-envelope mr-2"></i>
+          Gửi yêu cầu
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style> 

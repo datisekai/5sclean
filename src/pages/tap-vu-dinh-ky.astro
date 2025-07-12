@@ -1,0 +1,517 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Tạp vụ định kỳ";
+const pageDescription = "Dịch vụ tạp vụ định kỳ chuyên nghiệp cho văn phòng, nhà xưởng, trung tâm thương mại. Đảm bảo môi trường làm việc sạch sẽ, an toàn với đội ngũ nhân viên chuyên nghiệp.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-white">
+    <div class="container-custom section-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Dịch vụ tạp vụ định kỳ
+        </h1>
+        <p class="text-xl text-gray-100 leading-relaxed mb-8">
+          Giải pháp vệ sinh toàn diện cho doanh nghiệp với lịch trình định kỳ, 
+          đảm bảo môi trường làm việc luôn sạch sẽ và chuyên nghiệp.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/lien-he" class="btn-secondary text-lg px-8 py-4">
+            <i class="fas fa-phone mr-2"></i>
+            Tư vấn miễn phí
+          </a>
+          <a href="#bao-gia" class="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-white/30">
+            Xem báo giá
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="bg-gray-light py-8">
+    <div class="container-custom">
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-gray-dark mb-4">Mục lục</h2>
+        <nav class="space-y-2">
+          <a href="#dich-vu" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Các dịch vụ tạp vụ định kỳ
+          </a>
+          <a href="#quy-trinh" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Quy trình thực hiện
+          </a>
+          <a href="#bao-gia" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Báo giá dịch vụ
+          </a>
+          <a href="#uu-diem" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Ưu điểm của dịch vụ
+          </a>
+          <a href="#lien-he" class="block text-primary hover:text-primary-dark transition-colors">
+            <i class="fas fa-chevron-right mr-2"></i>
+            Liên hệ tư vấn
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="dich-vu" class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Các dịch vụ tạp vụ định kỳ
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Chúng tôi cung cấp đầy đủ các dịch vụ vệ sinh định kỳ phù hợp với từng loại hình doanh nghiệp
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-building text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh văn phòng</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Lau chùi bàn làm việc, tủ hồ sơ</li>
+            <li>• Vệ sinh sàn nhà, thảm trải sàn</li>
+            <li>• Lau kính, cửa sổ</li>
+            <li>• Vệ sinh nhà vệ sinh</li>
+            <li>• Đổ rác, thay túi rác</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-industry text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh nhà xưởng</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Vệ sinh sàn nhà xưởng</li>
+            <li>• Lau chùi máy móc, thiết bị</li>
+            <li>• Vệ sinh khu vực sản xuất</li>
+            <li>• Dọn dẹp kho bãi</li>
+            <li>• Xử lý rác thải công nghiệp</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-shopping-cart text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh trung tâm thương mại</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Vệ sinh sảnh chính, hành lang</li>
+            <li>• Lau chùi cửa kính, tường</li>
+            <li>• Vệ sinh nhà vệ sinh công cộng</li>
+            <li>• Dọn dẹp khu vực ăn uống</li>
+            <li>• Vệ sinh thang máy, thang cuốn</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-hospital text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh bệnh viện</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Vệ sinh phòng bệnh, hành lang</li>
+            <li>• Khử trùng bề mặt</li>
+            <li>• Vệ sinh phòng mổ</li>
+            <li>• Dọn dẹp khu vực chờ</li>
+            <li>• Xử lý rác thải y tế</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-graduation-cap text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh trường học</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Vệ sinh phòng học, hành lang</li>
+            <li>• Lau chùi bảng, bàn ghế</li>
+            <li>• Vệ sinh nhà vệ sinh học sinh</li>
+            <li>• Dọn dẹp sân chơi</li>
+            <li>• Vệ sinh thư viện, phòng lab</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mb-6">
+            <i class="fas fa-hotel text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Vệ sinh khách sạn</h3>
+          <ul class="text-gray space-y-2">
+            <li>• Vệ sinh phòng khách</li>
+            <li>• Lau chùi sảnh, hành lang</li>
+            <li>• Vệ sinh nhà hàng, bar</li>
+            <li>• Dọn dẹp khu vực hồ bơi</li>
+            <li>• Vệ sinh spa, gym</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="quy-trinh" class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Quy trình thực hiện
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Quy trình làm việc chuyên nghiệp, đảm bảo chất lượng và hiệu quả cao
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Khảo sát & Tư vấn</h3>
+          <p class="text-gray">
+            Khảo sát thực tế và tư vấn giải pháp phù hợp với từng loại hình doanh nghiệp
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Lập kế hoạch</h3>
+          <p class="text-gray">
+            Xây dựng lịch trình vệ sinh định kỳ và phân bổ nhân sự phù hợp
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Thực hiện</h3>
+          <p class="text-gray">
+            Thực hiện vệ sinh theo đúng quy trình và tiêu chuẩn đã cam kết
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Kiểm tra & Báo cáo</h3>
+          <p class="text-gray">
+            Kiểm tra chất lượng và gửi báo cáo chi tiết cho khách hàng
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="bao-gia" class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Báo giá dịch vụ
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Báo giá cạnh tranh, phù hợp với từng loại hình doanh nghiệp và tần suất vệ sinh
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Cơ bản</h3>
+            <div class="text-4xl font-bold text-primary mb-2">2.000.000đ</div>
+            <div class="text-gray">/tháng</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh 3 lần/tuần
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Diện tích dưới 200m²
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh cơ bản
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Báo cáo hàng tuần
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-primary relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+            Phổ biến
+          </div>
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Chuyên nghiệp</h3>
+            <div class="text-4xl font-bold text-primary mb-2">4.500.000đ</div>
+            <div class="text-gray">/tháng</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh 5 lần/tuần
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Diện tích 200-500m²
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh chuyên sâu
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Báo cáo hàng ngày
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Giám sát chất lượng
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-4">Cao cấp</h3>
+            <div class="text-4xl font-bold text-primary mb-2">8.000.000đ</div>
+            <div class="text-gray">/tháng</div>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh hàng ngày
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Diện tích trên 500m²
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Vệ sinh toàn diện
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Báo cáo real-time
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Quản lý chuyên nghiệp
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-3"></i>
+              Hỗ trợ 24/7
+            </li>
+          </ul>
+          <a href="/lien-he" class="w-full btn-primary text-center block">
+            Liên hệ tư vấn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section id="uu-diem" class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          Ưu điểm của dịch vụ
+        </h2>
+        <p class="text-xl text-gray max-w-3xl mx-auto">
+          Những lý do khiến khách hàng tin tưởng lựa chọn dịch vụ tạp vụ định kỳ của 5S Clean
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Đội ngũ chuyên nghiệp</h3>
+          <p class="text-gray">
+            Nhân viên được đào tạo bài bản, có kinh nghiệm và được trang bị đầy đủ kiến thức về vệ sinh công nghiệp
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-tools text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Thiết bị hiện đại</h3>
+          <p class="text-gray">
+            Sử dụng máy móc nhập khẩu chất lượng cao, đảm bảo hiệu quả vệ sinh và tiết kiệm thời gian
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-clock text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Linh hoạt về thời gian</h3>
+          <p class="text-gray">
+            Thực hiện vệ sinh vào thời gian phù hợp, không ảnh hưởng đến hoạt động kinh doanh
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-shield-alt text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Đảm bảo chất lượng</h3>
+          <p class="text-gray">
+            Cam kết chất lượng dịch vụ với hệ thống kiểm tra và giám sát chặt chẽ
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-dollar-sign text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Giá cả hợp lý</h3>
+          <p class="text-gray">
+            Báo giá cạnh tranh, minh bạch và phù hợp với từng loại hình doanh nghiệp
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-headset text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Hỗ trợ 24/7</h3>
+          <p class="text-gray">
+            Đội ngũ hỗ trợ khách hàng hoạt động 24/7, sẵn sàng giải đáp mọi thắc mắc
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="lien-he" class="section-padding bg-primary text-white">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Liên hệ tư vấn miễn phí
+        </h2>
+        <p class="text-xl text-gray-100 max-w-2xl mx-auto">
+          Hãy để lại thông tin, chúng tôi sẽ liên hệ tư vấn và báo giá chi tiết cho dịch vụ tạp vụ định kỳ
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-phone text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Gọi điện thoại</div>
+              <div class="text-gray-100">0123 456 789</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fab fa-zalo text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Zalo</div>
+              <div class="text-gray-100">0123 456 789</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Email</div>
+              <div class="text-gray-100">info@5sclean.com</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-xl"></i>
+            </div>
+            <div>
+              <div class="font-semibold">Địa chỉ</div>
+              <div class="text-gray-100">123 Đường ABC, Quận 1, TP.HCM</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Họ và tên *</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập họ và tên">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Số điện thoại *</label>
+                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập số điện thoại">
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Nhập email">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Loại hình doanh nghiệp</label>
+              <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                <option value="">Chọn loại hình doanh nghiệp</option>
+                <option value="van-phong">Văn phòng</option>
+                <option value="nha-xuong">Nhà xưởng</option>
+                <option value="tttm">Trung tâm thương mại</option>
+                <option value="benh-vien">Bệnh viện</option>
+                <option value="truong-hoc">Trường học</option>
+                <option value="khach-san">Khách sạn</option>
+                <option value="khac">Khác</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2">Ghi chú</label>
+              <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Mô tả chi tiết nhu cầu vệ sinh..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full btn-secondary text-lg py-4">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Gửi yêu cầu tư vấn
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout> 

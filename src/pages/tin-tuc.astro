@@ -1,0 +1,336 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Tin tức & Sự kiện";
+const pageDescription = "Cập nhật những tin tức mới nhất về ngành vệ sinh công nghiệp, xu hướng công nghệ và các sự kiện quan trọng của 5S Clean.";
+
+// Mock data for news - sẽ được thay thế bằng API call
+const news = [
+  {
+    id: 1,
+    title: "Xu hướng vệ sinh công nghiệp năm 2024",
+    excerpt: "Những xu hướng mới trong ngành vệ sinh công nghiệp và cách áp dụng công nghệ hiện đại để nâng cao hiệu quả làm việc...",
+    content: "Năm 2024 chứng kiến sự phát triển mạnh mẽ của công nghệ trong ngành vệ sinh công nghiệp. Các giải pháp thông minh như robot vệ sinh tự động, hệ thống quản lý chất lượng thời gian thực, và các thiết bị IoT đang trở thành xu hướng chủ đạo...",
+    image: "/news/trend-2024.jpg",
+    date: "2024-01-15",
+    category: "Tin tức",
+    author: "5S Clean",
+    tags: ["xu hướng", "công nghệ", "2024"],
+    slug: "1"
+  },
+  {
+    id: 2,
+    title: "Lợi ích của việc vệ sinh định kỳ",
+    excerpt: "Tại sao doanh nghiệp nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại cho môi trường làm việc...",
+    content: "Vệ sinh định kỳ không chỉ đảm bảo môi trường làm việc sạch sẽ mà còn mang lại nhiều lợi ích thiết thực cho doanh nghiệp. Theo nghiên cứu, môi trường làm việc sạch sẽ có thể tăng năng suất lao động lên đến 15%...",
+    image: "/news/benefits.jpg",
+    date: "2024-01-10",
+    category: "Kiến thức",
+    author: "5S Clean",
+    tags: ["vệ sinh định kỳ", "lợi ích", "doanh nghiệp"],
+    slug: "2"
+  },
+  {
+    id: 3,
+    title: "Công nghệ vệ sinh thông minh",
+    excerpt: "Khám phá các công nghệ vệ sinh hiện đại giúp tiết kiệm thời gian và chi phí cho doanh nghiệp...",
+    content: "Công nghệ vệ sinh thông minh đang cách mạng hóa ngành vệ sinh công nghiệp. Từ máy hút bụi robot đến hệ thống giám sát chất lượng thời gian thực, các giải pháp này giúp tối ưu hóa quy trình vệ sinh...",
+    image: "/news/smart-cleaning.jpg",
+    date: "2024-01-05",
+    category: "Công nghệ",
+    author: "5S Clean",
+    tags: ["công nghệ", "thông minh", "tiết kiệm"],
+    slug: "3"
+  },
+  {
+    id: 4,
+    title: "Hướng dẫn chọn dịch vụ vệ sinh phù hợp",
+    excerpt: "Những tiêu chí quan trọng để lựa chọn dịch vụ vệ sinh công nghiệp phù hợp với nhu cầu doanh nghiệp...",
+    content: "Việc lựa chọn dịch vụ vệ sinh công nghiệp phù hợp là yếu tố quan trọng quyết định hiệu quả vệ sinh và chi phí vận hành. Doanh nghiệp cần xem xét nhiều yếu tố như quy mô, loại hình hoạt động, ngân sách...",
+    image: "/news/choose-service.jpg",
+    date: "2024-01-01",
+    category: "Hướng dẫn",
+    author: "5S Clean",
+    tags: ["hướng dẫn", "lựa chọn", "dịch vụ"],
+    slug: "4"
+  },
+  {
+    id: 5,
+    title: "5S Clean đạt chứng nhận ISO 9001:2015",
+    excerpt: "Công ty 5S Clean vinh dự đạt được chứng nhận ISO 9001:2015 về hệ thống quản lý chất lượng...",
+    content: "Sau quá trình đánh giá nghiêm ngặt, 5S Clean đã chính thức đạt được chứng nhận ISO 9001:2015 về hệ thống quản lý chất lượng. Đây là minh chứng cho cam kết của chúng tôi trong việc cung cấp dịch vụ chất lượng cao...",
+    image: "/news/iso-certificate.jpg",
+    date: "2023-12-28",
+    category: "Sự kiện",
+    author: "5S Clean",
+    tags: ["chứng nhận", "ISO", "chất lượng"],
+    slug: "5"
+  },
+  {
+    id: 6,
+    title: "Tác động của môi trường làm việc đến năng suất",
+    excerpt: "Nghiên cứu cho thấy môi trường làm việc sạch sẽ có tác động tích cực đến năng suất và tinh thần nhân viên...",
+    content: "Môi trường làm việc sạch sẽ không chỉ tạo cảm giác thoải mái mà còn có tác động trực tiếp đến năng suất lao động. Nghiên cứu của các chuyên gia cho thấy nhân viên làm việc trong môi trường sạch sẽ có năng suất cao hơn...",
+    image: "/news/productivity.jpg",
+    date: "2023-12-20",
+    category: "Nghiên cứu",
+    author: "5S Clean",
+    tags: ["môi trường", "năng suất", "nghiên cứu"],
+    slug: "6"
+  }
+];
+
+// Categories for filtering
+const categories = [
+  { id: "all", name: "Tất cả", count: news.length },
+  { id: "tin-tuc", name: "Tin tức", count: news.filter(n => n.category === "Tin tức").length },
+  { id: "kien-thuc", name: "Kiến thức", count: news.filter(n => n.category === "Kiến thức").length },
+  { id: "cong-nghe", name: "Công nghệ", count: news.filter(n => n.category === "Công nghệ").length },
+  { id: "huong-dan", name: "Hướng dẫn", count: news.filter(n => n.category === "Hướng dẫn").length },
+  { id: "su-kien", name: "Sự kiện", count: news.filter(n => n.category === "Sự kiện").length },
+  { id: "nghien-cuu", name: "Nghiên cứu", count: news.filter(n => n.category === "Nghiên cứu").length }
+];
+
+// Get URL parameters for filtering
+const url = new URL(Astro.request.url);
+const selectedCategory = url.searchParams.get('category') || 'all';
+const searchQuery = url.searchParams.get('search') || '';
+
+// Filter news based on category and search
+let filteredNews = news;
+if (selectedCategory !== 'all') {
+  const categoryMap: Record<string, string> = {
+    'tin-tuc': 'Tin tức',
+    'kien-thuc': 'Kiến thức',
+    'cong-nghe': 'Công nghệ',
+    'huong-dan': 'Hướng dẫn',
+    'su-kien': 'Sự kiện',
+    'nghien-cuu': 'Nghiên cứu'
+  };
+  const categoryName = categoryMap[selectedCategory];
+  if (categoryName) {
+    filteredNews = news.filter(article => article.category === categoryName);
+  }
+}
+
+if (searchQuery) {
+  filteredNews = filteredNews.filter(article => 
+    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+}
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-white">
+    <div class="container-custom section-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Tin tức & Sự kiện
+        </h1>
+        <p class="text-xl text-gray-100 leading-relaxed mb-8">
+          Cập nhật những tin tức mới nhất về ngành vệ sinh công nghiệp, 
+          xu hướng công nghệ và các sự kiện quan trọng của 5S Clean
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section class="bg-gray-light py-8">
+    <div class="container-custom">
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <!-- Search Form -->
+        <form method="GET" class="mb-6">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <input 
+                type="text" 
+                name="search" 
+                value={searchQuery}
+                placeholder="Tìm kiếm bài viết..." 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+            </div>
+            <button type="submit" class="btn-primary px-8">
+              <i class="fas fa-search mr-2"></i>
+              Tìm kiếm
+            </button>
+          </div>
+        </form>
+        
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <a 
+              href={`/tin-tuc?category=${category.id}${searchQuery ? `&search=${searchQuery}` : ''}`}
+              class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedCategory === category.id 
+                  ? 'bg-primary text-white' 
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              {category.name} ({category.count})
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="section-padding">
+    <div class="container-custom">
+      {filteredNews.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredNews.map((article) => (
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div class="h-48 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-image text-4xl text-gray-400"></i>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center space-x-2 mb-3">
+                  <span class="text-xs bg-primary text-white px-2 py-1 rounded-full">{article.category}</span>
+                  <span class="text-sm text-gray">{new Date(article.date).toLocaleDateString('vi-VN')}</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-dark mb-3 line-clamp-2">
+                  <a href={`/tin-tuc/${article.slug}`} class="hover:text-primary transition-colors">
+                    {article.title}
+                  </a>
+                </h3>
+                <p class="text-gray mb-4 line-clamp-3">{article.excerpt}</p>
+                <div class="flex items-center justify-between">
+                  <a href={`/tin-tuc/${article.slug}`} class="text-primary font-semibold hover:text-primary-dark transition-colors">
+                    Đọc thêm
+                    <i class="fas fa-arrow-right ml-1"></i>
+                  </a>
+                  <div class="text-sm text-gray">
+                    <i class="fas fa-user mr-1"></i>
+                    {article.author}
+                  </div>
+                </div>
+                {article.tags.length > 0 && (
+                  <div class="mt-4 flex flex-wrap gap-1">
+                    {article.tags.map((tag) => (
+                      <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-dark mb-2">Không tìm thấy bài viết</h3>
+          <p class="text-gray mb-6">
+            {searchQuery 
+              ? `Không có bài viết nào phù hợp với từ khóa "${searchQuery}"`
+              : 'Không có bài viết nào trong danh mục này'
+            }
+          </p>
+          <a href="/tin-tuc" class="btn-primary">
+            <i class="fas fa-arrow-left mr-2"></i>
+            Xem tất cả bài viết
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-dark mb-4">
+          Đăng ký nhận tin tức
+        </h2>
+        <p class="text-xl text-gray mb-8">
+          Nhận những tin tức mới nhất về ngành vệ sinh công nghiệp và các ưu đãi đặc biệt
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Nhập email của bạn" 
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            required
+          >
+          <button type="submit" class="btn-primary px-8">
+            <i class="fas fa-paper-plane mr-2"></i>
+            Đăng ký
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Tags -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <h2 class="text-2xl font-bold text-gray-dark mb-8 text-center">Tags phổ biến</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {Array.from(new Set(news.flatMap(article => article.tags))).map((tag) => (
+          <a 
+            href={`/tin-tuc?search=${tag}`}
+            class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-primary hover:text-white transition-colors"
+          >
+            #{tag}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+
+  <script>
+    // Client-side search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('input[name="search"]') as HTMLInputElement;
+      const searchForm = document.querySelector('form[method="GET"]') as HTMLFormElement;
+      
+      // Auto-submit form when search input changes (with debounce)
+      let searchTimeout: NodeJS.Timeout;
+      searchInput?.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          searchForm?.submit();
+        }, 500);
+      });
+      
+      // Category filter functionality
+      const categoryLinks = document.querySelectorAll('a[href*="category="]');
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', function(this: HTMLElement, e: Event) {
+          // Remove active class from all links
+          categoryLinks.forEach(l => l.classList.remove('bg-primary', 'text-white'));
+          categoryLinks.forEach(l => l.classList.add('bg-gray-200', 'text-gray-700'));
+          
+          // Add active class to clicked link
+          this.classList.remove('bg-gray-200', 'text-gray-700');
+          this.classList.add('bg-primary', 'text-white');
+        });
+      });
+    });
+  </script>
+</Layout> 

@@ -1,0 +1,320 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Liên hệ";
+const pageDescription = "Liên hệ với 5S Clean để được tư vấn miễn phí và nhận báo giá chi tiết cho dịch vụ vệ sinh công nghiệp. Hotline: 0123 456 789";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary via-primary-dark to-primary-light text-white">
+    <div class="container-custom section-padding">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Liên hệ với chúng tôi
+        </h1>
+        <p class="text-xl text-gray-100 leading-relaxed mb-8">
+          Hãy để lại thông tin, chúng tôi sẽ liên hệ tư vấn và báo giá chi tiết 
+          cho dịch vụ vệ sinh công nghiệp trong thời gian sớm nhất.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-phone text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Gọi điện thoại</h3>
+          <p class="text-gray mb-4">Hỗ trợ 24/7</p>
+          <a href="tel:0123456789" class="text-primary font-semibold text-lg hover:text-primary-dark transition-colors">
+            0123 456 789
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <img src="/icons/zalo.png" alt="Zalo" class="w-10 h-10">
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Zalo</h3>
+          <p class="text-gray mb-4">Chat trực tuyến</p>
+          <a href="https://zalo.me/0123456789" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold text-lg hover:text-primary-dark transition-colors">
+            0123 456 789
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-envelope text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Email</h3>
+          <p class="text-gray mb-4">Phản hồi nhanh</p>
+          <a href="mailto:info@5sclean.com" class="text-primary font-semibold text-lg hover:text-primary-dark transition-colors">
+            info@5sclean.com
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+          <div class="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-dark mb-4">Địa chỉ</h3>
+          <p class="text-gray mb-4">Văn phòng chính</p>
+          <p class="text-primary font-semibold text-sm">
+            123 Đường ABC, Quận 1, TP.HCM
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-dark mb-6">Gửi yêu cầu tư vấn</h2>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-gray-dark mb-2">Họ và tên *</label>
+                <input 
+                  type="text" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Nhập họ và tên"
+                >
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-dark mb-2">Số điện thoại *</label>
+                <input 
+                  type="tel" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Nhập số điện thoại"
+                >
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-dark mb-2">Email</label>
+              <input 
+                type="email" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Nhập email"
+              >
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-dark mb-2">Công ty</label>
+              <input 
+                type="text" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Nhập tên công ty"
+              >
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-dark mb-2">Dịch vụ quan tâm</label>
+              <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                <option value="">Chọn dịch vụ</option>
+                <option value="tap-vu-dinh-ky">Tạp vụ định kỳ</option>
+                <option value="tong-ve-sinh">Tổng vệ sinh</option>
+                <option value="giat-tham-sofa">Giặt thảm, sofa, ghế</option>
+                <option value="ve-sinh-cong-nghiep">Vệ sinh công nghiệp</option>
+                <option value="khac">Dịch vụ khác</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-dark mb-2">Diện tích (m²)</label>
+              <input 
+                type="number" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Nhập diện tích cần vệ sinh"
+              >
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-dark mb-2">Nội dung yêu cầu *</label>
+              <textarea 
+                rows="4" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Mô tả chi tiết nhu cầu vệ sinh của bạn..."
+              ></textarea>
+            </div>
+            
+            <button type="submit" class="w-full btn-primary text-lg py-4">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Gửi yêu cầu tư vấn
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-6">Thông tin liên hệ</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-dark">Địa chỉ văn phòng</h4>
+                  <p class="text-gray">123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-dark">Giờ làm việc</h4>
+                  <p class="text-gray">Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                  <p class="text-gray">Thứ 7: 8:00 - 12:00</p>
+                  <p class="text-gray">Chủ nhật: Nghỉ</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-dark">Điện thoại</h4>
+                  <p class="text-gray">0123 456 789</p>
+                  <p class="text-gray">Hỗ trợ 24/7</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-dark">Email</h4>
+                  <p class="text-gray">info@5sclean.com</p>
+                  <p class="text-gray">support@5sclean.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-dark mb-6">Mạng xã hội</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+                <i class="fab fa-facebook-f text-white"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors">
+                <i class="fab fa-youtube text-white"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center hover:bg-pink-700 transition-colors">
+                <i class="fab fa-tiktok text-white"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center hover:bg-green-700 transition-colors">
+                <i class="fab fa-whatsapp text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-dark mb-4">Vị trí của chúng tôi</h2>
+        <p class="text-xl text-gray">Tìm đường đến văn phòng 5S Clean</p>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="h-96 bg-gray-200 flex items-center justify-center">
+          <div class="text-center">
+            <i class="fas fa-map text-4xl text-gray-400 mb-4"></i>
+            <p class="text-gray">Bản đồ sẽ được tích hợp ở đây</p>
+            <p class="text-sm text-gray mt-2">123 Đường ABC, Quận 1, TP.HCM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-gray-light">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-dark mb-4">Câu hỏi thường gặp</h2>
+        <p class="text-xl text-gray">Những câu hỏi phổ biến về dịch vụ của chúng tôi</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-4">
+        <div class="bg-white rounded-lg shadow-sm">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-dark">Thời gian phản hồi yêu cầu tư vấn là bao lâu?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="px-6 pb-4 hidden">
+            <p class="text-gray">Chúng tôi sẽ phản hồi trong vòng 2 giờ làm việc kể từ khi nhận được yêu cầu tư vấn của bạn.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-dark">Có cung cấp dịch vụ khảo sát miễn phí không?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="px-6 pb-4 hidden">
+            <p class="text-gray">Có, chúng tôi cung cấp dịch vụ khảo sát và tư vấn miễn phí cho tất cả khách hàng.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-dark">Làm việc vào cuối tuần và ngày lễ không?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="px-6 pb-4 hidden">
+            <p class="text-gray">Có, chúng tôi cung cấp dịch vụ 24/7, bao gồm cả cuối tuần và ngày lễ theo yêu cầu của khách hàng.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-sm">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-dark">Có bảo hành dịch vụ không?</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="px-6 pb-4 hidden">
+            <p class="text-gray">Có, chúng tôi cam kết bảo hành chất lượng dịch vụ và sẽ thực hiện lại nếu khách hàng không hài lòng.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleFAQ(button: HTMLElement) {
+      const content = button.nextElementSibling as HTMLElement;
+      const icon = button.querySelector('i') as HTMLElement;
+      
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</Layout> 
