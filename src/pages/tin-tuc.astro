@@ -8,26 +8,26 @@ const pageDescription = "Cập nhật những tin tức mới nhất về ngành
 const news = [
   {
     id: 1,
-    title: "Xu hướng vệ sinh công nghiệp năm 2024",
-    excerpt: "Những xu hướng mới trong ngành vệ sinh công nghiệp và cách áp dụng công nghệ hiện đại để nâng cao hiệu quả làm việc...",
-    content: "Năm 2024 chứng kiến sự phát triển mạnh mẽ của công nghệ trong ngành vệ sinh công nghiệp. Các giải pháp thông minh như robot vệ sinh tự động, hệ thống quản lý chất lượng thời gian thực, và các thiết bị IoT đang trở thành xu hướng chủ đạo...",
-    image: "/news/trend-2024.jpg",
-    date: "2024-01-15",
+    title: "5S Clean chính thức ra mắt tại Rạch Giá",
+    excerpt: "Công ty vệ sinh công nghiệp mới với cam kết mang đến dịch vụ chất lượng cao cho cộng đồng địa phương...",
+    content: "Năm 2024, 5S Clean chính thức ra mắt tại Rạch Giá, Kiên Giang với tâm huyết mang đến dịch vụ vệ sinh công nghiệp chất lượng cao cho cộng đồng địa phương. Công ty cam kết sử dụng phương pháp vệ sinh hiện đại và đội ngũ nhân viên được đào tạo chuyên nghiệp...",
+    image: "/news/launch-2024.jpg",
+    date: "2024-12-20",
     category: "Tin tức",
     author: "5S Clean",
-    tags: ["xu hướng", "công nghệ", "2024"],
+    tags: ["ra mắt", "Rạch Giá", "2024"],
     slug: "1"
   },
   {
     id: 2,
     title: "Lợi ích của việc vệ sinh định kỳ",
-    excerpt: "Tại sao doanh nghiệp nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại cho môi trường làm việc...",
-    content: "Vệ sinh định kỳ không chỉ đảm bảo môi trường làm việc sạch sẽ mà còn mang lại nhiều lợi ích thiết thực cho doanh nghiệp. Theo nghiên cứu, môi trường làm việc sạch sẽ có thể tăng năng suất lao động lên đến 15%...",
+    excerpt: "Tại sao doanh nghiệp tại Rạch Giá nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại cho môi trường làm việc...",
+    content: "Vệ sinh định kỳ không chỉ đảm bảo môi trường làm việc sạch sẽ mà còn mang lại nhiều lợi ích thiết thực cho doanh nghiệp tại Rạch Giá. Theo nghiên cứu, môi trường làm việc sạch sẽ có thể tăng năng suất lao động lên đến 15%...",
     image: "/news/benefits.jpg",
-    date: "2024-01-10",
+    date: "2024-12-15",
     category: "Kiến thức",
     author: "5S Clean",
-    tags: ["vệ sinh định kỳ", "lợi ích", "doanh nghiệp"],
+    tags: ["vệ sinh định kỳ", "lợi ích", "doanh nghiệp", "Rạch Giá"],
     slug: "2"
   },
   {
@@ -56,14 +56,14 @@ const news = [
   },
   {
     id: 5,
-    title: "5S Clean đạt chứng nhận ISO 9001:2015",
-    excerpt: "Công ty 5S Clean vinh dự đạt được chứng nhận ISO 9001:2015 về hệ thống quản lý chất lượng...",
-    content: "Sau quá trình đánh giá nghiêm ngặt, 5S Clean đã chính thức đạt được chứng nhận ISO 9001:2015 về hệ thống quản lý chất lượng. Đây là minh chứng cho cam kết của chúng tôi trong việc cung cấp dịch vụ chất lượng cao...",
-    image: "/news/iso-certificate.jpg",
-    date: "2023-12-28",
+    title: "5S Clean đăng ký kinh doanh thành công",
+    excerpt: "Công ty 5S Clean đã hoàn tất thủ tục đăng ký kinh doanh và sẵn sàng cung cấp dịch vụ vệ sinh công nghiệp tại Rạch Giá...",
+    content: "Sau quá trình chuẩn bị kỹ lưỡng, 5S Clean đã chính thức hoàn tất thủ tục đăng ký kinh doanh và sẵn sàng cung cấp dịch vụ vệ sinh công nghiệp tại Rạch Giá. Đây là bước đầu tiên trong hành trình phát triển của công ty...",
+    image: "/news/business-license.jpg",
+    date: "2024-12-10",
     category: "Sự kiện",
     author: "5S Clean",
-    tags: ["chứng nhận", "ISO", "chất lượng"],
+    tags: ["đăng ký kinh doanh", "Rạch Giá", "thành lập"],
     slug: "5"
   },
   {
@@ -156,7 +156,7 @@ if (searchQuery) {
               >
             </div>
             <button type="submit" class="btn-primary px-8">
-              <i class="fas fa-search mr-2"></i>
+              <i class="fas fa-search mr-2" aria-hidden="true"></i>
               Tìm kiếm
             </button>
           </div>
@@ -189,7 +189,7 @@ if (searchQuery) {
           {filteredNews.map((article) => (
             <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div class="h-48 bg-gray-200 flex items-center justify-center">
-                <i class="fas fa-image text-4xl text-gray-400"></i>
+                <i class="fas fa-image text-4xl text-gray-400" aria-hidden="true"></i>
               </div>
               <div class="p-6">
                 <div class="flex items-center space-x-2 mb-3">
@@ -205,10 +205,10 @@ if (searchQuery) {
                 <div class="flex items-center justify-between">
                   <a href={`/tin-tuc/${article.slug}`} class="text-primary font-semibold hover:text-primary-dark transition-colors">
                     Đọc thêm
-                    <i class="fas fa-arrow-right ml-1"></i>
+                    <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
                   </a>
                   <div class="text-sm text-gray">
-                    <i class="fas fa-user mr-1"></i>
+                    <i class="fas fa-user mr-1" aria-hidden="true"></i>
                     {article.author}
                   </div>
                 </div>
@@ -227,7 +227,7 @@ if (searchQuery) {
         </div>
       ) : (
         <div class="text-center py-12">
-          <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+          <i class="fas fa-search text-4xl text-gray-400 mb-4" aria-hidden="true"></i>
           <h3 class="text-xl font-semibold text-gray-dark mb-2">Không tìm thấy bài viết</h3>
           <p class="text-gray mb-6">
             {searchQuery 
@@ -236,7 +236,7 @@ if (searchQuery) {
             }
           </p>
           <a href="/tin-tuc" class="btn-primary">
-            <i class="fas fa-arrow-left mr-2"></i>
+            <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i>
             Xem tất cả bài viết
           </a>
         </div>
@@ -262,7 +262,7 @@ if (searchQuery) {
             required
           >
           <button type="submit" class="btn-primary px-8">
-            <i class="fas fa-paper-plane mr-2"></i>
+            <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>
             Đăng ký
           </button>
         </form>

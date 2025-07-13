@@ -1,7 +1,6 @@
 ---
 import Logo from '../components/Logo.astro';
 import '../styles/global.css';
-import zaloIcon from '../assets/icons/zalo.png';
 export interface Props {
   title: string;
   description?: string;
@@ -11,8 +10,8 @@ export interface Props {
 
 const { 
   title, 
-  description = "5S Clean - Dịch vụ vệ sinh công nghiệp chuyên nghiệp, uy tín hàng đầu. Chúng tôi cung cấp các dịch vụ vệ sinh toàn diện cho doanh nghiệp và hộ gia đình.",
-  image = "/og-image.jpg",
+  description = "5S Clean - Dịch vụ vệ sinh công nghiệp chuyên nghiệp tại Rạch Giá, Kiên Giang. Chuyên cung cấp dịch vụ vệ sinh văn phòng, nhà xưởng, khách sạn, trường học với đội ngũ nhân viên chuyên nghiệp và thiết bị hiện đại.",
+  image = "/logo.webp",
   canonical = Astro.url.href
 
 } = Astro.props;
@@ -33,28 +32,113 @@ const fullTitle = `${title} | ${siteName}`;
     <!-- SEO Meta Tags -->
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="vệ sinh công nghiệp, dịch vụ vệ sinh, tạp vụ định kỳ, tổng vệ sinh, giặt thảm, sofa, ghế, 5S Clean" />
+    <meta name="keywords" content="vệ sinh công nghiệp Rạch Giá, dịch vụ vệ sinh văn phòng, vệ sinh nhà xưởng, vệ sinh khách sạn, vệ sinh trường học, tạp vụ định kỳ, tổng vệ sinh, giặt thảm sofa, vệ sinh công nghiệp Kiên Giang, 5S Clean, dịch vụ vệ sinh chuyên nghiệp, vệ sinh công nghiệp uy tín" />
     <meta name="author" content="5S Clean" />
     <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="VN-47" />
+    <meta name="geo.placename" content="Rạch Giá, Kiên Giang" />
+    <meta name="geo.position" content="10.0124;105.0919" />
+    <meta name="ICBM" content="10.0124, 105.0919" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonical} />
+    <meta property="og:url" content="https://5sclean.vercel.app/" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:image" content="https://5sclean.vercel.app/logo.webp" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:locale" content="vi_VN" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="5S Clean - Dịch vụ vệ sinh công nghiệp Rạch Giá" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:url" content="https://5sclean.vercel.app/" />
     <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <meta property="twitter:image" content="https://5sclean.vercel.app/logo.webp" />
+    <meta property="twitter:image:alt" content="5S Clean - Dịch vụ vệ sinh công nghiệp Rạch Giá" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonical} />
+    <link rel="canonical" href="https://5sclean.vercel.app/" />
+    
+    <!-- Additional SEO Tags -->
+    <meta name="language" content="Vietnamese" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "5S Clean",
+      "description": "Dịch vụ vệ sinh công nghiệp chuyên nghiệp tại Rạch Giá, Kiên Giang",
+      "url": "https://5sclean.vercel.app/",
+      "telephone": "+84-123-456-789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Đường ABC",
+        "addressLocality": "Rạch Giá",
+        "addressRegion": "Kiên Giang",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.0124,
+        "longitude": 105.0919
+      },
+      "openingHours": "Mo-Su 07:00-18:00",
+      "priceRange": "$$",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.0124,
+          "longitude": 105.0919
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ vệ sinh công nghiệp",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vệ sinh văn phòng"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vệ sinh nhà xưởng"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vệ sinh khách sạn"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Giặt thảm sofa"
+            }
+          }
+        ]
+      }
+    }
+    </script>
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,9 +163,14 @@ const fullTitle = `${title} | ${siteName}`;
             <a href="/" class="nav-link">Trang chủ</a>
             <a href="/gioi-thieu" class="nav-link">Giới thiệu</a>
             <div class="relative group">
-              <button class="nav-link flex items-center space-x-1">
+              <button 
+                class="nav-link flex items-center space-x-1"
+                aria-label="Mở menu dịch vụ"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
                 <span>Dịch vụ</span>
-                <i class="fas fa-chevron-down text-xs"></i>
+                <i class="fas fa-chevron-down text-xs" aria-hidden="true"></i>
               </button>
               <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div class="py-2">
@@ -98,13 +187,25 @@ const fullTitle = `${title} | ${siteName}`;
           <!-- Search and Mobile Menu -->
           <div class="flex items-center space-x-4">
             <!-- Search Button -->
-            <button class="p-2 text-gray-600 hover:text-primary transition-colors" id="searchBtn">
-              <i class="fas fa-search"></i>
+            <button 
+              class="p-2 text-gray-600 hover:text-primary transition-colors" 
+              id="searchBtn"
+              aria-label="Tìm kiếm bài viết"
+              title="Tìm kiếm bài viết"
+            >
+              <i class="fas fa-search" aria-hidden="true"></i>
             </button>
             
             <!-- Mobile Menu Button -->
-            <button class="lg:hidden p-2 text-gray-600 hover:text-primary transition-colors" id="mobileMenuBtn">
-              <i class="fas fa-bars"></i>
+            <button 
+              class="lg:hidden p-2 text-gray-600 hover:text-primary transition-colors" 
+              id="mobileMenuBtn"
+              aria-label="Mở menu di động"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+              title="Mở menu di động"
+            >
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             
             <!-- Contact Buttons -->
@@ -141,8 +242,13 @@ const fullTitle = `${title} | ${siteName}`;
         <div class="bg-white rounded-lg w-full max-w-2xl p-6">
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-semibold">Tìm kiếm bài viết</h3>
-            <button class="text-gray-500 hover:text-gray-700" id="closeSearchBtn">
-              <i class="fas fa-times"></i>
+            <button 
+              class="text-gray-500 hover:text-gray-700" 
+              id="closeSearchBtn"
+              aria-label="Đóng tìm kiếm"
+              title="Đóng tìm kiếm"
+            >
+              <i class="fas fa-times" aria-hidden="true"></i>
             </button>
           </div>
           <div class="relative">
@@ -152,8 +258,13 @@ const fullTitle = `${title} | ${siteName}`;
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               id="searchInput"
             >
-            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
-              <i class="fas fa-search"></i>
+            <button 
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary"
+              type="submit"
+              aria-label="Tìm kiếm"
+              title="Tìm kiếm"
+            >
+              <i class="fas fa-search" aria-hidden="true"></i>
             </button>
           </div>
           <div id="searchResults" class="mt-4 max-h-96 overflow-y-auto"></div>
@@ -170,14 +281,18 @@ const fullTitle = `${title} | ${siteName}`;
     <div class="fixed bottom-6 right-6 z-40 space-y-3">
       <!-- Zalo Button -->
       <a href="https://zalo.me/0123456789" target="_blank" rel="noopener noreferrer" 
-         class="block w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-pulse-gentle">
-        <img src={'/icons/zalo.png'} alt="Zalo" class="w-10 h-10" />
+         class="block w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-pulse-gentle"
+         aria-label="Liên hệ qua Zalo"
+         title="Liên hệ qua Zalo">
+        <img src={'/icons/zalo.webp'} alt="Zalo" class="w-10 h-10" />
       </a>
       
       <!-- Phone Button -->
       <a href="tel:0123456789" 
-         class="block w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-bounce-gentle">
-        <i class="fas fa-phone text-xl"></i>
+         class="block w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-bounce-gentle"
+         aria-label="Gọi điện thoại"
+         title="Gọi điện thoại">
+        <i class="fas fa-phone text-xl" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -187,24 +302,19 @@ const fullTitle = `${title} | ${siteName}`;
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Company Info -->
           <div class="space-y-4">
-            <div class="flex items-center space-x-2">
-              <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">5S</span>
-              </div>
-              <span class="text-xl font-bold">Clean</span>
-            </div>
+           <Logo size="lg" textClassName='text-white'/>
             <p class="text-gray-300">
               Dịch vụ vệ sinh công nghiệp chuyên nghiệp, uy tín hàng đầu với hơn 10 năm kinh nghiệm.
             </p>
             <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i class="fab fa-facebook text-xl"></i>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
+                <i class="fab fa-facebook text-xl" aria-hidden="true"></i>
               </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i class="fab fa-youtube text-xl"></i>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="YouTube">
+                <i class="fab fa-youtube text-xl" aria-hidden="true"></i>
               </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <i class="fab fa-tiktok text-xl"></i>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="TikTok">
+                <i class="fab fa-tiktok text-xl" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -236,15 +346,15 @@ const fullTitle = `${title} | ${siteName}`;
             <h3 class="text-lg font-semibold mb-4">Liên hệ</h3>
             <div class="space-y-3">
               <div class="flex items-center space-x-3">
-                <i class="fas fa-map-marker-alt text-primary"></i>
-                <span class="text-gray-300">123 Đường ABC, Quận 1, TP.HCM</span>
+                <i class="fas fa-map-marker-alt text-primary" aria-hidden="true"></i>
+                <span class="text-gray-300">123 Đường ABC, Rạch Giá, Kiên Giang</span>
               </div>
               <div class="flex items-center space-x-3">
-                <i class="fas fa-phone text-primary"></i>
+                <i class="fas fa-phone text-primary" aria-hidden="true"></i>
                 <span class="text-gray-300">0123 456 789</span>
               </div>
               <div class="flex items-center space-x-3">
-                <i class="fas fa-envelope text-primary"></i>
+                <i class="fas fa-envelope text-primary" aria-hidden="true"></i>
                 <span class="text-gray-300">info@5sclean.com</span>
               </div>
             </div>
@@ -272,7 +382,13 @@ const fullTitle = `${title} | ${siteName}`;
       const mobileMenu = document.getElementById('mobileMenu');
       
       mobileMenuBtn?.addEventListener('click', () => {
+        const isHidden = mobileMenu?.classList.contains('hidden');
         mobileMenu?.classList.toggle('hidden');
+        
+        // Update ARIA attributes for accessibility
+        if (mobileMenuBtn) {
+          mobileMenuBtn.setAttribute('aria-expanded', (!isHidden).toString());
+        }
       });
       
       // Search Modal Toggle

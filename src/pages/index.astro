@@ -34,21 +34,21 @@ const services = [
 const certificates = [
   {
     id: 1,
-    title: "ISO 9001:2015",
-    description: "Chứng nhận hệ thống quản lý chất lượng",
-    image: "/certificates/iso-9001.jpg"
+    title: "Đăng ký kinh doanh",
+    description: "Giấy phép kinh doanh hợp pháp tại Rạch Giá",
+    image: "/certificates/business-license.jpg"
   },
   {
     id: 2,
-    title: "ISO 14001:2015",
-    description: "Chứng nhận hệ thống quản lý môi trường",
-    image: "/certificates/iso-14001.jpg"
+    title: "Bảo hiểm trách nhiệm",
+    description: "Bảo hiểm trách nhiệm dân sự cho dịch vụ vệ sinh",
+    image: "/certificates/insurance.jpg"
   },
   {
     id: 3,
-    title: "OHSAS 18001:2007",
-    description: "Chứng nhận hệ thống quản lý an toàn lao động",
-    image: "/certificates/ohsas-18001.jpg"
+    title: "Chứng nhận đào tạo",
+    description: "Đội ngũ nhân viên được đào tạo chuyên nghiệp",
+    image: "/certificates/training.jpg"
   }
 ];
 
@@ -56,26 +56,26 @@ const certificates = [
 const news = [
   {
     id: 1,
-    title: "Xu hướng vệ sinh công nghiệp năm 2024",
-    excerpt: "Những xu hướng mới trong ngành vệ sinh công nghiệp và cách áp dụng công nghệ hiện đại...",
-    image: "/news/trend-2024.jpg",
-    date: "2024-01-15",
+    title: "5S Clean chính thức ra mắt tại Rạch Giá",
+    excerpt: "Công ty vệ sinh công nghiệp mới với cam kết mang đến dịch vụ chất lượng cao cho cộng đồng địa phương...",
+    image: "/news/launch-2024.jpg",
+    date: "2024-12-20",
     category: "Tin tức"
   },
   {
     id: 2,
     title: "Lợi ích của việc vệ sinh định kỳ",
-    excerpt: "Tại sao doanh nghiệp nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại...",
+    excerpt: "Tại sao doanh nghiệp tại Rạch Giá nên đầu tư vào dịch vụ vệ sinh định kỳ và những lợi ích mang lại...",
     image: "/news/benefits.jpg",
-    date: "2024-01-10",
+    date: "2024-12-15",
     category: "Kiến thức"
   },
   {
     id: 3,
-    title: "Công nghệ vệ sinh thông minh",
-    excerpt: "Khám phá các công nghệ vệ sinh hiện đại giúp tiết kiệm thời gian và chi phí...",
-    image: "/news/smart-cleaning.jpg",
-    date: "2024-01-05",
+    title: "Phương pháp vệ sinh hiện đại",
+    excerpt: "Áp dụng các phương pháp vệ sinh hiện đại giúp tiết kiệm thời gian và chi phí cho doanh nghiệp...",
+    image: "/news/modern-cleaning.jpg",
+    date: "2024-12-10",
     category: "Công nghệ"
   }
 ];
@@ -96,8 +96,9 @@ const news = [
             <span class="text-secondary block">chuyên nghiệp</span>
           </h1>
           <p class="text-xl text-gray-100 leading-relaxed">
-            Với hơn 10 năm kinh nghiệm, 5S Clean tự hào là đối tác tin cậy của hàng nghìn doanh nghiệp 
-            trong việc duy trì môi trường làm việc sạch sẽ, an toàn.
+            Mới thành lập với tâm huyết mang đến dịch vụ vệ sinh công nghiệp chất lượng cao tại Rạch Giá, 
+            5S Clean cam kết đáp ứng mọi nhu cầu vệ sinh của doanh nghiệp và hộ gia đình với đội ngũ nhân viên 
+            chuyên nghiệp và thiết bị hiện đại.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/lien-he" class="btn-secondary text-lg px-8 py-4">
@@ -115,20 +116,20 @@ const news = [
             <h3 class="text-2xl font-bold mb-6">Thống kê nổi bật</h3>
             <div class="grid grid-cols-2 gap-6">
               <div class="text-center">
-                <div class="text-3xl font-bold text-secondary mb-2">500+</div>
+                <div class="text-3xl font-bold text-secondary mb-2">50+</div>
                 <div class="text-sm">Khách hàng</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold text-secondary mb-2">10+</div>
-                <div class="text-sm">Năm kinh nghiệm</div>
+                <div class="text-3xl font-bold text-secondary mb-2">2024</div>
+                <div class="text-sm">Năm thành lập</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold text-secondary mb-2">50+</div>
+                <div class="text-3xl font-bold text-secondary mb-2">15+</div>
                 <div class="text-sm">Nhân viên</div>
               </div>
               <div class="text-center">
                 <div class="text-3xl font-bold text-secondary mb-2">100%</div>
-                <div class="text-sm">Hài lòng</div>
+                <div class="text-sm">Cam kết chất lượng</div>
               </div>
             </div>
           </div>
@@ -155,13 +156,13 @@ const news = [
           <div class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div class="p-8">
               <div class={`w-16 h-16 ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <i class={`${service.icon} text-2xl text-white`}></i>
+                <i class={`${service.icon} text-2xl text-white`} aria-hidden="true"></i>
               </div>
               <h3 class="text-xl font-bold text-gray-dark mb-4">{service.title}</h3>
               <p class="text-gray mb-6 leading-relaxed">{service.description}</p>
               <a href={service.link} class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors">
                 Tìm hiểu thêm
-                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -179,14 +180,14 @@ const news = [
             Về 5S Clean
           </h2>
           <p class="text-lg text-gray leading-relaxed">
-            Được thành lập từ năm 2014, 5S Clean đã trở thành một trong những công ty vệ sinh công nghiệp 
-            hàng đầu tại Việt Nam. Chúng tôi cam kết mang đến dịch vụ chất lượng cao với đội ngũ nhân viên 
-            chuyên nghiệp và trang thiết bị hiện đại.
+            Được thành lập năm 2024 tại Rạch Giá, Kiên Giang, 5S Clean là công ty vệ sinh công nghiệp mới 
+            với tâm huyết mang đến dịch vụ chất lượng cao cho cộng đồng địa phương. Chúng tôi cam kết sử dụng 
+            phương pháp vệ sinh hiện đại và đội ngũ nhân viên được đào tạo chuyên nghiệp.
           </p>
           <div class="grid grid-cols-2 gap-6">
             <div class="flex items-center space-x-3">
               <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <i class="fas fa-check text-white"></i>
+                <i class="fas fa-check text-white" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold">Chất lượng cao</div>
@@ -195,7 +196,7 @@ const news = [
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <i class="fas fa-clock text-white"></i>
+                <i class="fas fa-clock text-white" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold">Nhanh chóng</div>
@@ -204,7 +205,7 @@ const news = [
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <i class="fas fa-shield-alt text-white"></i>
+                <i class="fas fa-shield-alt text-white" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold">An toàn</div>
@@ -213,7 +214,7 @@ const news = [
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <i class="fas fa-dollar-sign text-white"></i>
+                <i class="fas fa-dollar-sign text-white" aria-hidden="true"></i>
               </div>
               <div>
                 <div class="font-semibold">Giá tốt</div>
@@ -231,28 +232,28 @@ const news = [
             <h3 class="text-2xl font-bold mb-6">Tại sao chọn 5S Clean?</h3>
             <div class="space-y-4">
               <div class="flex items-start space-x-3">
-                <i class="fas fa-star text-secondary mt-1"></i>
+                <i class="fas fa-star text-secondary mt-1" aria-hidden="true"></i>
                 <div>
                   <div class="font-semibold">Đội ngũ chuyên nghiệp</div>
                   <div class="text-sm text-gray-100">Nhân viên được đào tạo bài bản</div>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
-                <i class="fas fa-star text-secondary mt-1"></i>
+                <i class="fas fa-star text-secondary mt-1" aria-hidden="true"></i>
                 <div>
                   <div class="font-semibold">Thiết bị hiện đại</div>
                   <div class="text-sm text-gray-100">Máy móc nhập khẩu chất lượng cao</div>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
-                <i class="fas fa-star text-secondary mt-1"></i>
+                <i class="fas fa-star text-secondary mt-1" aria-hidden="true"></i>
                 <div>
                   <div class="font-semibold">Dịch vụ 24/7</div>
                   <div class="text-sm text-gray-100">Hỗ trợ khách hàng mọi lúc</div>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
-                <i class="fas fa-star text-secondary mt-1"></i>
+                <i class="fas fa-star text-secondary mt-1" aria-hidden="true"></i>
                 <div>
                   <div class="font-semibold">Giá cả hợp lý</div>
                   <div class="text-sm text-gray-100">Cam kết giá tốt nhất thị trường</div>
